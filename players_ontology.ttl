@@ -1,0 +1,60 @@
+@prefix dbr:     <http://dbpedia.org/resource/>.
+@prefix rdf:	    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix ldp:	<http://www.w3.org/ns/ldp#> . 
+@prefix ns3:	<http://oplusmacintel2.intranet.openlinksw.com:8893/DAV/home/danielhm/Public/QA/nfl_player_ontology.ttl#> . 
+@prefix owl:	<http://www.w3.org/2002/07/owl#> . 
+@prefix schema:	<http://schema.org/> . 
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> . 
+
+# Properties
+
+<#draftTeam>
+ a rdf:Property,
+   owl:ObjectProperty;
+ rdfs:label "draftTeam";
+ rdfs:domain schema:Person;
+ rdfs:range schema:SportsTeam.
+
+<#draftRound>
+ a rdf:Property,
+   owl:DatatypeProperty;
+ rdfs:label "draftRound";     
+ rdfs:domain schema:Person;
+ rdfs:range xsd:integer.
+
+<#draftPick>
+ a rdf:Property,
+   owl:DatatypeProperty;
+ rdfs:label "draftPick";
+ rdfs:domain schema:Person;
+ rdfs:range xsd:integer.
+
+<#draftYear>
+ a rdf:Property,
+   owl:DatatypeProperty;
+ rdfs:label "draftYear";  
+ rdfs:domain schema:Person;
+rdfs:range xsd:integer.
+
+<#position>
+ a rdf:Property,
+   owl:ObjectProperty;
+ rdfs:label "draftTeam";
+ rdfs:domain schema:Person;
+ rdfs:range <#Position>.
+
+<#Position> 
+ a rdfs:Class; 
+ rdfs:label "draftTeam";
+ rdfs:subClassOf schema:Person.
+
+ <#Player> 
+ a rdfs:Class; 
+ rdfs:label "Football Player";
+ rdfs:subClassOf schema:Person.
+
+<#Team> 
+ a rdfs:Class; 
+ rdfs:label "Football Team";
+ rdfs:subClassOf schema:SportsTeam.
