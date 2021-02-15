@@ -1,5 +1,6 @@
 import pyodbc as db
-from query import query, query_nd
+from query import query, query_nd, query_n1
 
-q = "SELECT TOP 5 *  FROM nfl.pbp.demo"
-query_nd(q)
+q = "select top 2 * from kg.wine.raw"
+query(q)
+query_n1("SPARQL CLEAR GRAPH <urn:nfl:kg:pbp>")
