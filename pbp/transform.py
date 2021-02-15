@@ -10,7 +10,7 @@ queries = {
     "r2rml_qm_drop":'SPARQL DROP QUAD MAP <%s>' % (source),
     "r2rml_clear_graph":'SPARQL CLEAR GRAPH <%s>' % (source),
     "r2rml_insert":"DB.DBA.R2RML_GENERATE_LINKED_VIEW('%s', '%s',0 ,1)" % (source,destination),
-    #"r2rml_physical":"RDF_VIEW_SYNC_TO_PHYSICAL ('%s', 1, 'urn:nfl:kg:pbp')" % (destination),
+    "r2rml_physical":"RDF_VIEW_SYNC_TO_PHYSICAL ('%s', 1, 'urn:nfl:kg:pbp')" % (destination),
 }
 
 for y in queries.values():

@@ -10,6 +10,7 @@ def query(x):
     if row:
         print(row)
 
+#Use For Queries/Procedures That Don't Return Output
 def query_n1(x):
     try:
         x = x
