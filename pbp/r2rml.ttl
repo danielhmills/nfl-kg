@@ -50,7 +50,7 @@ rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:passtype ] ; rr:object
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:issack ] ; rr:objectMap [ rr:datatype xsd:boolean; rr:column "IsSack" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:ischallenge ] ; rr:objectMap [ rr:datatype xsd:boolean; rr:column "IsChallenge" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:ischallengereversed ] ; rr:objectMap [ rr:datatype xsd:boolean; rr:column "IsChallengeReversed" ]; ] ;
-rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:challenger ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://demo.openlinksw.com/nfl/teams#{Challenger}" ]; ] ;
+rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:challenger ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://demo.openlinksw.com/nfl/data/teams#{Challenger}" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:ismeasurement ] ; rr:objectMap [ rr:datatype xsd:boolean; rr:column "IsMeasurement" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:isinterception ] ; rr:objectMap [ rr:datatype xsd:boolean; rr:column "IsInterception" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:isfumble ] ; rr:objectMap [ rr:datatype xsd:boolean; rr:column "IsFumble" ]; ] ;
@@ -61,7 +61,7 @@ rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:rushdirection ] ; rr:o
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:yardlinefixed ] ; rr:objectMap [ rr:column "YardLineFixed" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:yardlinedirection ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://demo.openlinksw.com/nfl/ontology#{YardLineDirection}" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:ispenaltyaccepted ] ; rr:objectMap [ rr:datatype xsd:boolean; rr:column "IsPenaltyAccepted" ]; ] ;
-rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:penaltyteam ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://demo.openlinksw.com/nfl/teams#{PenaltyTeam}" ]; ] ;
+rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:penaltyteam ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://demo.openlinksw.com/nfl/data/teams#{PenaltyTeam}" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:isnoplay ] ; rr:objectMap [ rr:datatype xsd:boolean; rr:column "IsNoPlay" ]; ] ;
-rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:penaltytype ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://demo.openlinksw.com/nfl/teams#{PenaltyType}" ]; ] ;
+rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:penaltytype ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://demo.openlinksw.com/nfl/data/teams#{PenaltyType}" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:penaltyyards ] ; rr:objectMap [ rr:datatype xsd:integer; rr:column "PenaltyYards" ]; ] .
