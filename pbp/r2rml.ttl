@@ -11,7 +11,7 @@
 
 
 <#TriplesMapTEAMS> a rr:TriplesMap; rr:logicalTable [ rr:tableSchema "NFL" ; rr:tableOwner "PBP" ; rr:tableName "TEAMS" ]; 
-rr:subjectMap [ rr:termType rr:IRI  ; rr:template "http://demo.openlinksw.com/nfl/data/teams#{Column_1}#this"; rr:class nfl:Team; rr:graph <http://demo.openlinksw.com/nfl-pbp-kg#> ];
+rr:subjectMap [ rr:termType rr:IRI  ; rr:template "http://demo.openlinksw.com/nfl/data/teams#{Column_1}"; rr:class nfl:Team; rr:graph <http://demo.openlinksw.com/nfl-pbp-kg#> ];
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:shortName ] ; rr:objectMap [ rr:column "Column_1" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant rdfs:label] ; rr:objectMap [ rr:column "Column_2" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant owl:sameAs ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://dbpedia.org/resource/{teamurifield}" ]; ] ;
@@ -28,8 +28,8 @@ rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:gamedate ] ; rr:object
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:quarter ] ; rr:objectMap [ rr:datatype xsd:integer; rr:column "Quarter" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:minute ] ; rr:objectMap [ rr:datatype xsd:integer; rr:column "Minute" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:second ] ; rr:objectMap [ rr:datatype xsd:integer; rr:column "Second" ]; ] ;
-rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:offenseteam ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://demo.openlinksw.com/nfl/teams#{OffenseTeam}" ]; ] ;
-rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:defenseteam ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://demo.openlinksw.com/nfl/teams#{DefenseTeam}" ]; ] ;
+rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:offenseteam ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://demo.openlinksw.com/nfl/data/teams#{OffenseTeam}" ]; ] ;
+rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:defenseteam ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "http://demo.openlinksw.com/nfl/data/teams#{DefenseTeam}" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:down ] ; rr:objectMap [ rr:datatype xsd:integer; rr:column "Down" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:togo ] ; rr:objectMap [ rr:datatype xsd:integer; rr:column "ToGo" ]; ] ;
 rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:yardline ] ; rr:objectMap [ rr:datatype xsd:integer; rr:column "YardLine" ]; ] ;
