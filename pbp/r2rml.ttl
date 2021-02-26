@@ -1,5 +1,5 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
-@prefix nfl: <http://demo.openlinksw.com/schemas/nfl/> .
+@prefix nfl: <http://demo.openlinksw.com/schemas/nfl#> .
 @prefix nfl-stat: <http://demo.openlinksw.com/nfl/stat#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix void: <http://rdfs.org/ns/void#> .
@@ -7,6 +7,15 @@
 @prefix aowl: <http://bblfish.net/work/atom-owl/2006-06-06/> .
 @prefix schema: <http:/schema.org/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+
+<#TriplesMapTEAMS> a rr:TriplesMap; rr:logicalTable [ rr:tableSchema "NFL" ; rr:tableOwner "PBP" ; rr:tableName "TEAMS" ]; 
+rr:subjectMap [ rr:termType rr:IRI  ; rr:template "http://demo.openlinksw.com/nfl/data/teams#{Column_1}#this"; rr:class nfl:Team; rr:graph <http://demo.openlinksw.com/nfl-pbp-kg#> ];
+rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:shortName ] ; rr:objectMap [ rr:column "Column_1" ]; ] ;
+rr:predicateObjectMap [ rr:predicateMap [ rr:constant rdfs:label] ; rr:objectMap [ rr:column "Column_2" ]; ] ;
+rr:predicateObjectMap [ rr:predicateMap [ rr:constant owl:sameAs ] ; rr:objectMap [ rr:termType rr:IRI; rr:template "{teamurifield}" ]; ] ;
+rr:predicateObjectMap [ rr:predicateMap [ rr:constant nfl:pastTeam ] ; rr:objectMap [ rr:termType rr:IRI; rr:template  "{pastTeam}" ]; ] .
 
 <#TriplesMapGame> a rr:TriplesMap; rr:logicalTable [ rr:tableSchema "NFL" ; rr:tableOwner "PBP" ; rr:tableName "DATA" ]; 
 rr:subjectMap [ rr:termType rr:IRI  ; rr:template "http://demo.openlinksw.com/nfl/data/game#{GameId}"; rr:class nfl:Game; rr:graph <http://demo.openlinksw.com/nfl-pbp-kg#> ];
